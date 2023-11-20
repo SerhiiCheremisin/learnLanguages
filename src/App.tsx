@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import useGetLanguageState from './hooks/useGetLanguageState';
+import ChoserLanguageModal from './components/Modals/ChoserLanguageModal';
+import { navigationMenu } from './services/navigationData';
+import useCommonDispatch from './hooks/useCommonDispatch';
+import { setMotherLanguage, setLearningLanguage } from './redux/reducers/languageReducer';
 
-function App() {
+import CardNavigation from './components/CardNavigation';
+
+const App = ():JSX.Element => {
+
+const languages = useGetLanguageState();
+const dispatch = useCommonDispatch();
+
+useEffect( () => {
+  const motherLang = localStorage.getItem("motherLanguage");
+  const learningLang = localStorage.getItem("learningLanguage");
+  if (motherLang !== null && learningLang !== null) {
+    dispatch(setMotherLanguage(motherLang));
+    dispatch(setLearningLanguage(learningLang));
+    return
+  }
+   return
+}, [])
+
+if (languages.learningLanguage === "" || languages.motherLanguage === "") {
+   return(
+    <ChoserLanguageModal/>
+   )
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CardNavigation mappingArray={navigationMenu}/>
   );
 }
 
