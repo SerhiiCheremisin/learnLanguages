@@ -78,3 +78,13 @@ export const PopoverButton = styled(Button)({
   borderRadius: 15,
   position: "absolute"
 })
+
+
+export const EmptyRoom = styled(Box)({
+    position: "absolute",
+    left: -955,
+    top: -410,
+    width: 1920,
+    height: "90vh",
+    zIndex: 1
+})

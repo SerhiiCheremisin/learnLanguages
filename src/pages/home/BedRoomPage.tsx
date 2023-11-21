@@ -1,6 +1,7 @@
 import React from 'react';
 import PageWithPhotoWrapper from '../../components/PageWithPhotoWrapper';
-import { Bed, EmptyRoom, Lamp, Wardrobe } from '../../utils//styles/pagesStyles/badroomStyles';
+import { Bed, Lamp, Wardrobe, Mirror } from '../../utils/styles/pagesStyles/badroomStyles';
+import { EmptyRoom } from '../../utils/styles/commonStyles';
 import '../../App.css';
 import CommonPopover from '../../components/CommonPopover';
 import { bedroomDictionary } from '../../services/dictionaries';
@@ -24,6 +25,10 @@ const BedRoomPage = ():JSX.Element  => {
     <CommonPopover left={190} top={80} word={bedroomDictionary.pillow}/> 
      <img className='img' src="/items/bed.png" alt="bed" />
     </Bed>
+    <Mirror>
+    <CommonPopover left={250} top={180} word={bedroomDictionary.mirror}/> 
+    <img className='img' src="/items/mirror.png" alt="woman wardrobe" />
+    </Mirror>
   </PageWithPhotoWrapper>
   )
 }

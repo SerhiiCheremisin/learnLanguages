@@ -47,7 +47,7 @@ const CommonPopover = ( { left, top, word } : ICommonPopoverProps ) => {
             horizontal: 'left',
           }}
         >
-          <Typography sx={{ p: 2 }}>{`${word[languages.motherLanguage].toUpperCase()} ⸺> ${word[languages.learningLanguage].toUpperCase()}`}</Typography>
+          <Typography sx={{ p: 2 }}>{`${String(word[languages.motherLanguage]).toUpperCase()} ⸺> ${String(word[languages.learningLanguage]).toUpperCase()}`}</Typography>
         </Popover>
       </Box>
     );

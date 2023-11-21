@@ -8,7 +8,7 @@ import NaturePage from "../pages/nature/NaturePage";
 
 import KitchenPage from "../pages/home/KitchenPage";
 import LivingRoomPage from "../pages/home/LivingRoomPage";
-import BedRoomPage from "../pages/home/BedRoomPage";
+import BedRoomPage from "../pages/home/BedroomPage";
 
 
 export const navigationMenu : navigationMenuType[] = [

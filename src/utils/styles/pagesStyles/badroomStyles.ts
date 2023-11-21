@@ -4,6 +4,15 @@ import { Button, Stack } from "@mui/material";
 import { Typography } from '@mui/material';
 import { colors } from "../colors";
 
+export const Mirror = styled(Box)({
+    position: "absolute",
+    left: -550,
+    top: -190,
+    width: 600,
+    height: 600,
+    zIndex: 15,
+})
+
 export const Bed = styled(Box)({
    position: "absolute",
    left: 450,
@@ -30,13 +39,4 @@ export const Wardrobe = styled(Box)({
     height: 600,
     zIndex: 15,
 
-})
-
-export const EmptyRoom = styled(Box)({
-    position: "absolute",
-    left: -955,
-    top: -410,
-    width: 1920,
-    height: "90vh",
-    zIndex: 1
 })
