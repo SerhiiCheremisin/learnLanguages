@@ -31,7 +31,7 @@ const cardHandler = (path:ISecondNavigationMenu):void => {
         <Card onClick={() => cardHandler(path)} sx={{ width: "350px", cursor: "pointer", transition: ".5s ease", "&:hover": {filter: "sepia(70%)"} }} key={path.path}>
           { categories.map( (element: any) => {
             if (path.category === element.baseCategory) {
-              return <CardHeader key={element.baseCategory} title={element[languages.motherLanguage].toUpperCase()}/>
+              return <CardHeader key={element.baseCategory} title={String(element[languages.motherLanguage]).toUpperCase()}/>
             }
             return null
           }) }

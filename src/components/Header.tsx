@@ -9,6 +9,7 @@ import AvatarWithLanguage from './AvatarWithLanguage';
 import { categories } from '../services/commonData';
 import { setLearningLanguage, setMotherLanguage } from '../redux/reducers/languageReducer';
 import useCommonDispatch from '../hooks/useCommonDispatch';
+import ChoserLanguageModal from './Modals/ChoserLanguageModal';
 
 const Header = ():JSX.Element => {
  const languages = useGetLanguageState();

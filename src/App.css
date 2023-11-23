@@ -22,7 +22,7 @@ a {
   color: #ffff;
 }
 a:hover {
-  text-decoration: underline;
+  color: var(--passive);
 }
 .pending{
   display: flex;
@@ -42,5 +42,6 @@ a:hover {
   height: 30px;
   padding: 7px;
   transition: .5s ease-in;
-  border-bottom: 1px solid black;;
+  border-bottom: 1px solid black;
+  color: var(--active)
 }

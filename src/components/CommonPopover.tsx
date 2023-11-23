@@ -2,8 +2,6 @@ import React from 'react';
 import useGetLanguageState from '../hooks/useGetLanguageState';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { dictionaryEntityType } from '../services/types';
 
 import { PopoverButton } from '../utils/styles/commonStyles';
 import { Box } from '@mui/material';
@@ -13,7 +11,6 @@ interface ICommonPopoverProps {
   top: number,
   word: any
 }
-
 
 const CommonPopover = ( { left, top, word } : ICommonPopoverProps ) => {
 
@@ -34,7 +31,7 @@ const CommonPopover = ( { left, top, word } : ICommonPopoverProps ) => {
   
     return (
       <Box sx={{position: "absolute", left: `${left}px`, top: `${top}px`}}>
-        <PopoverButton sx={{padding: "5px"}} aria-describedby={id} variant="outlined" onClick={handleClick}>
+        <PopoverButton sx={{padding: "5px", backgroundColor: "white"}} aria-describedby={id} variant="outlined" onClick={handleClick}>
           <img width="15px" src="/question.svg" alt="question mark" />
         </PopoverButton>
         <Popover
@@ -47,7 +44,8 @@ const CommonPopover = ( { left, top, word } : ICommonPopoverProps ) => {
             horizontal: 'left',
           }}
         >
-          <Typography sx={{ p: 2 }}>{`${String(word[languages.motherLanguage]).toUpperCase()} ⸺> ${String(word[languages.learningLanguage]).toUpperCase()}`}</Typography>
+          <Typography sx={{ p: 2 }}>{`${String(word[languages.motherLanguage]).toUpperCase()} `} 
+                                    <img style={{width: "10px"}} src="/items/arrow-right-solid.svg" alt="arrow" /> {` ${String(word[languages.learningLanguage]).toUpperCase()}`}</Typography>
         </Popover>
       </Box>
     );

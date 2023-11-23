@@ -22,7 +22,7 @@ useEffect( () => {
     return
   }
    return
-}, [])
+})
 
 if (languages.learningLanguage === "" || languages.motherLanguage === "") {
    return(

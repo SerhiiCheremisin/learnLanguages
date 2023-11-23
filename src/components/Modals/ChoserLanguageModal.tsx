@@ -22,9 +22,11 @@ const languageHandler = (lang:string, type: "mother" | "learn" ):void => {
     dispatch(setMotherLanguage(lang));
     return
    }
-   dispatch(setLearningLanguage(lang));
-   setLanguageToLocalStorage(lang, type);
-   return
+   else {
+    setLanguageToLocalStorage(lang, type);
+    dispatch(setLearningLanguage(lang));
+    return
+   }
 }
 
 if (languages.motherLanguage === "") {
