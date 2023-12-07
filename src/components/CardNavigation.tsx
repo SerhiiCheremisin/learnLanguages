@@ -22,7 +22,7 @@ const cardHandler = (path:ISecondNavigationMenu):void => {
 
   return (
     <CenteredBox>
-    <CardHolder>
+    <CardHolder data-testid="singleCategoryCard">
     { mappingArray.map( (path: any) => {
       if (path.category === "main") {
         return null

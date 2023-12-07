@@ -28,11 +28,11 @@ const Header = ():JSX.Element => {
 
   return (
     <HeaderStyled>
-      <HeaderBlockLanguages>
+      <HeaderBlockLanguages data-testid="choserMenu">
        <AvatarWithLanguage role={"mother" } language={languages.motherLanguage}/>
        <AvatarWithLanguage role={"learn"} language={languages.learningLanguage}/>
       </HeaderBlockLanguages>
-      <HeaderBlockLinks>
+      <HeaderBlockLinks data-testid="links">
       { navigationMenu.map( (path:navigationMenuType ) => {
        if (path.category === "main") {
         return null
