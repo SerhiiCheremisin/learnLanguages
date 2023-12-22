@@ -46,7 +46,7 @@ export const livingRoomDictionary = {
         UA: "килим"
     },
     laptop: {
-        ENG : "socket",
+        ENG : "laptop",
         SLO: "prenosnik",
         UA: "ноутбук"
     },

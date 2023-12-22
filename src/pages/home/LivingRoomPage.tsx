@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PageWithPhotoWrapper from '../../components/PageWithPhotoWrapper';
 import { EmptyRoom } from '../../utils/styles/commonStyles';
 import CommonPopover from '../../components/CommonPopover';
 import { commonWords, livingRoomDictionary } from '../../services/dictionaries';
 import { CoffeeTable, Sofa, TV, Laptop, Carpet, Socket, Plant } from '../../utils/styles/pagesStyles/livingRoomStyles';
+import { apiDataFetcher } from '../../services/api';
+import Loader from '../../components/Loader';
 
 const LivingRoomPage = ():JSX.Element  => {
+
+  const [dictionary, setDictionary] = useState<any>({}); 
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+ //left here using local dict on porpuse
+
   return (
     <PageWithPhotoWrapper>
      <EmptyRoom>
